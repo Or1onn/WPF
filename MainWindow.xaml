@@ -1,0 +1,48 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="FromFolder" Grid.Row="1" Height="50" HorizontalAlignment="Center" Width="400"/>
+
+        <Button Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" Width="140" 
+                Height="30" Content="Open" Click="Button_Click"/>
+
+
+        <TextBox x:Name="IntoFolder" Grid.Row="2" Height="50" HorizontalAlignment="Center" Width="400"/>
+
+        <Button Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" Width="140" 
+                Height="30" Content="Open" Click="Button_Click_1"/>
+
+        <ProgressBar x:Name="Progress" Grid.Row="3" Grid.ColumnSpan="2" Width="500" Height="50"/>
+
+        <Button Grid.Row="4" HorizontalAlignment="Center" Width="140" 
+                Height="30" Content="Start" Click="Button_Click_2"/>
+
+        <Button Grid.Row="4" HorizontalAlignment="Center" Width="140" 
+                Height="30" Content="Pause" Margin="350,0,0,0" Click="Button_Click_4"/>
+
+        <Button Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" Width="100" 
+                Height="30" Content="Stop" Click="Button_Click_3" Margin="-150, 0, 0, 0"/>
+        
+        <Button Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" Width="100" 
+                Height="30" Content="Resume" Margin="120, 0, 0, 0" Click="Button_Click_5"/>
+    </Grid>
+</Window>
